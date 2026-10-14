@@ -1,0 +1,19 @@
+services:
+  vk-bot:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+    image: kramertheblack/vkbot:latest
+    container_name: vk_bot
+    environment:
+      - BOT_CONFIG=/app/config/bot.conf
+    volumes:
+      # Настройки бота
+      - ./bot.conf:/app/config/bot.conf:ro
+      # Токен доступа
+      - ./token.txt:/app/config/token.txt:ro
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+
