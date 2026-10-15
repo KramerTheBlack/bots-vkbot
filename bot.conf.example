@@ -1,8 +1,6 @@
 [DEFAULT]
 # адрес сообщества
-commid=club31956167
+commid=club11111111
 # файл доступа с токеном
 token_file=/app/config/token.txt
-# API-ключ для AI Mistral
-mistral_api_key=
 
